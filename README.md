@@ -1,3 +1,5 @@
+[![Build Status](https://semaphoreci.com/api/v1/diaz/open_list/branches/master/badge.svg)](https://semaphoreci.com/diaz/open_list)
+
 # Sanction lists parser
 
 ## DESCRIPTION
@@ -29,8 +31,8 @@ Since the lists are used in 'sensible' projects, the objective is not to import 
 `php composer.phar install`
 
 2. Create folder lists and output
-* `mkdir lists`
-* `mkdir output`
+ `mkdir lists`
+ `mkdir output`
 
 ## HOW TO USE
 
