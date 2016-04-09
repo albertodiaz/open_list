@@ -1,0 +1,45 @@
+{
+  "name": "adiaz/openlist",
+  "type": "library",
+  "description": "Lists parser to generate an unified format.",
+  "keywords": ["sanction_screening", "aml", "sanctions","lists","pep"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alberto Diaz"
+    }
+  ],
+  "require": {
+    "php": ">=5.3",
+    "ext-json": "*",
+    "ext-simplexml": "*",
+    "symfony/console": "3.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "*",
+    "squizlabs/php_codesniffer": "2.*",
+    "fabpot/php-cs-fixer": "1.*",
+    "satooshi/php-coveralls": "1.*",
+    "psr/log": "^1.0",
+    "fzaninotto/Faker": "1.*"
+
+  },
+  "suggest": {
+    "ext-intl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "OpenList\\": "src/OpenList/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "OpenList\\PHPUnit\\": "tests/OpenList/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}

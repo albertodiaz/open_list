@@ -1,0 +1,6 @@
+lists/*
+output/*
+vendor
+.idea
+composer.lock
+build
