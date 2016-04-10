@@ -27,8 +27,6 @@ class UsofacTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        ini_set('memory_limit', '350M');
-
         // output file and folder
         $this->output_folder = __DIR__.'/../../../output/';
         $this->output_file = $this->output_folder.'test_ofac_'.date('Y-m-d').'.json';

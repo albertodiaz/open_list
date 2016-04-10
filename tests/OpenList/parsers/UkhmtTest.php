@@ -26,9 +26,6 @@ class UkhmtTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        // assign more memory to the the script
-        ini_set('memory_limit', '300M');
-
         // output file and folder
         $this->output_folder = __DIR__.'/../../../output/';
         $this->output_file = $this->output_folder.'test_ukhmt_'.date('Y-m-d').'.json';

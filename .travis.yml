@@ -28,7 +28,6 @@ script:
     - php open_list.php process
     - phpunit --verbose --coverage-clover build/logs/clover.xml
     - phpenv config-rm xdebug.ini || return 0
-    - php php-cs-fixer --diff --dry-run -v fix
 
 after_success:
     - php vendor/bin/coveralls -v

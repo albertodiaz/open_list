@@ -27,9 +27,6 @@ class UnscTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        // assign more memory to the the script
-        ini_set('memory_limit', '300M');
-
         // output file and folder
         $this->output_file = __DIR__.'/../fixtures/output/test_unsc_2016-03-26.json';
 
