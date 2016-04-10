@@ -24,7 +24,7 @@ use ADiaz\AML\OpenList\models\Program;
  *
  * @link http://tytem.com
  */
-class Unsc implements IList
+class Unsc implements ListInterface
 {
     protected $path_source;
     protected $sanction_file_content;
@@ -364,13 +364,21 @@ class Unsc implements IList
         return implode($delimeter, $designations);
     }
 
+    /**
+     * just a simple function to add to a string.
+     *
+     * @param $str
+     * @param $label
+     *
+     * @return string
+     */
     protected function addToRemarks($str, $label)
     {
         return ($str !== null) ? $label.' '.$str : '';
     }
 
     /**
-     * @param $array
+     * @param \SimpleXMLElement $array
      *
      * @return bool
      * @TODO improve it

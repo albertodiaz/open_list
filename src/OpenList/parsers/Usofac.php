@@ -26,7 +26,7 @@ use ADiaz\AML\OpenList\models\Program;
  *
  * @link http://tytem.com
  */
-class Usofac implements IList
+class Usofac implements ListInterface
 {
     const ID = 'Id';
     const AKA = 'Aka';

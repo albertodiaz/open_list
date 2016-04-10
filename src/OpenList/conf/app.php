@@ -1,6 +1,4 @@
 <?php
-//increase the memory limit
-ini_set('memory_limit', '256M');
 
 $lists = include __DIR__.'/lists.php';
 

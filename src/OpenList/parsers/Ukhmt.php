@@ -25,7 +25,7 @@ use ADiaz\AML\OpenList\models\Program;
  *
  * @link http://tytem.com
  */
-class Ukhmt implements IList
+class Ukhmt implements ListInterface
 {
     protected $prime_alias;
     protected $aka_fka_rows;
@@ -353,7 +353,7 @@ class Ukhmt implements IList
 
         // check the file
         if (!$this->list_file_content) {
-            die(self::ERROR_FILE);
+            throw new \UnexpectedValueException(self::ERROR_FILE);
         }
 
         $this->setPrimaryEntitiesAkasFkas();

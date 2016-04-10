@@ -1,6 +1,5 @@
 lists/*
-output/a*
-output/u*
+output/*
 vendor
 .idea
 composer.lock

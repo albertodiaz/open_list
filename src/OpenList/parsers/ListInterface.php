@@ -21,7 +21,7 @@ namespace ADiaz\AML\OpenList\parsers;
  *
  * @link http://tytem.com
  */
-interface IList
+interface ListInterface
 {
     /**
      * Process the list (read, process, set the date and verify entities).

@@ -2,8 +2,6 @@
 
 namespace ADiaz\AML\OpenList\helpers;
 
-require __DIR__.'/../../../vendor/fzaninotto/faker/src/autoload.php';
-
 /**
  * This file is part of the OpenList Parser utility.
  *
@@ -43,14 +41,11 @@ class OfacCreator
      */
     protected static function replaceContent($node)
     {
-        $faker = Faker\Factory::create();
-
-        self::setter($node, 'firstName', $faker->name);
-        self::setter($node, 'lastName', $faker->lastName);
-        self::setter($node, 'sdnType', $faker->randomElement(['Entity', 'Individual']));
-        self::setter($node, 'uid', $faker->numberBetween(10000, 900000));
-        self::setter($node, 'title', $faker->randomElement(['Aerospace Engineer', 'Agricultural Engineer', 'Automotive Engineer', 'Biological Engineer', 'Biomedical Engineer']));
-        //self::setter($node, 'programList', $faker->country, 'program');
+        self::setter($node, 'firstName', Faker::getName());
+        self::setter($node, 'lastName', Faker::getSurname());
+        self::setter($node, 'sdnType', Faker::randomElement(['Entity', 'Individual']));
+        self::setter($node, 'uid', mt_rand(10000, 900000));
+        self::setter($node, 'title', Faker::randomElement(['Aerospace Engineer', 'Agricultural Engineer', 'Automotive Engineer', 'Biological Engineer', 'Biomedical Engineer']));
     }
 
     /**

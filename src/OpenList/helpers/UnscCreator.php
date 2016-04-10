@@ -2,8 +2,6 @@
 
 namespace ADiaz\AML\OpenList\helpers;
 
-require_once __DIR__.'/../../../vendor/fzaninotto/Faker/src/autoload.php';
-
 /**
  * Class UnscCreator
  * This class helps to create a similar Unsc lists to be used for tests based in the last version of the list.
@@ -51,19 +49,17 @@ class UnscCreator
      */
     protected static function replaceContent($node)
     {
-        $faker = Faker\Factory::create();
-
-        self::setter($node, 'FIRST_NAME', $faker->name);
-        self::setter($node, 'SECOND_NAME', $faker->lastName);
-        self::setter($node, 'THIRD_NAME', $faker->lastName);
-        self::setter($node, 'FOURTH_NAME', $faker->lastName);
-        self::setter($node, 'NAME_ORIGINAL_SCRIPT', $faker->name);
-        self::setter($node, 'COMMENTS1', $faker->sentence);
-        self::setter($node, 'LISTED_ON', $faker->date());
-        self::setter($node, 'REFERENCE_NUMBER', $faker->numberBetween(1000000, 9999999));
-        self::setter($node, 'DATAID', $faker->numberBetween(10000, 99999));
-        self::setter($node, 'VERSIONNUM', $faker->numberBetween(1, 99));
-        self::setter($node, 'UN_LIST_TYPE', $faker->country);
+        self::setter($node, 'FIRST_NAME', Faker::getName());
+        self::setter($node, 'SECOND_NAME', Faker::getSurname());
+        self::setter($node, 'THIRD_NAME', Faker::getSurname());
+        self::setter($node, 'FOURTH_NAME', Faker::getSurname());
+        self::setter($node, 'NAME_ORIGINAL_SCRIPT', Faker::getName());
+        self::setter($node, 'COMMENTS1', Faker::getString(20));
+        self::setter($node, 'LISTED_ON', Faker::getDate());
+        self::setter($node, 'REFERENCE_NUMBER', mt_rand(1000000, 9999999));
+        self::setter($node, 'DATAID', mt_rand(10000, 99999));
+        self::setter($node, 'VERSIONNUM', mt_rand(1, 99));
+        self::setter($node, 'UN_LIST_TYPE', Faker::getCountry());
     }
 
     /**

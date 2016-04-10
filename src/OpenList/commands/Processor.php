@@ -137,11 +137,13 @@ class Processor extends Command
      * Validate if the list contains the minimun elemenents.
      *
      * @param $list
+     *
+     * @throws LogicException
      */
     protected function validateInfo($list)
     {
         if (!array_key_exists('id', $list) || !array_key_exists('url', $list) || !array_key_exists('folder', $list) || !array_key_exists('filename', $list) || !array_key_exists('format', $list) || !array_key_exists('class', $list)) {
-            exit('Please fill the info of the list');
+            throw new LogicException('Please fill the info of the list');
         }
     }
 

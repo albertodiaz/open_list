@@ -31,8 +31,7 @@ class UnscTest extends \PHPUnit_Framework_TestCase
         ini_set('memory_limit', '300M');
 
         // output file and folder
-        $this->output_folder = __DIR__.'/../../../output/';
-        $this->output_file = $this->output_folder.'test_unsc_2016-03-26.json';
+        $this->output_file = __DIR__.'/../fixtures/output/test_unsc_2016-03-26.json';
 
         // parser
         $this->parser = new Unsc();
