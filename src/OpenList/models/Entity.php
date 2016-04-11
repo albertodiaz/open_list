@@ -117,6 +117,7 @@ class Entity
             $this->place_of_birth_list[] = $pob;
         }
     }
+
     public function addProgram(Program $program)
     {
         if (!$this->isEmpty($program) && !in_array($program, $this->program_list)) {
