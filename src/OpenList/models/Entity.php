@@ -125,6 +125,7 @@ class Entity
             $this->program_list[] = $program;
         }
     }
+
     public function addUpdateAt($date)
     {
         if ((bool) strtotime($date)) {

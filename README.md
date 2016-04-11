@@ -2,6 +2,7 @@
 [![Dependency Status](https://www.versioneye.com/user/projects/570bd9d3fcd19a00415b1194/badge.svg?style=flat)](https://www.versioneye.com/user/projects/570bd9d3fcd19a00415b1194)
 [![Code Climate](https://codeclimate.com/github/albertodiaz/open_list/badges/gpa.svg)](https://codeclimate.com/github/albertodiaz/open_list)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/albertodiaz/open_list/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/albertodiaz/open_list/?branch=master)
+[![StyleCI](https://styleci.io/repos/55849989/shield)](https://styleci.io/repos/55849989)
 
 # Sanction lists parser
 
