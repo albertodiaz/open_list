@@ -1,6 +1,5 @@
 <?php
 
-
 namespace ADiaz\AML\OpenList\parsers;
 
 /**

@@ -2,11 +2,11 @@
 
 namespace ADiaz\AML\OpenList\parsers;
 
-use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Address;
 use ADiaz\AML\OpenList\models\Aka;
 use ADiaz\AML\OpenList\models\Citizenship;
 use ADiaz\AML\OpenList\models\DateOfBirth;
+use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Id;
 use ADiaz\AML\OpenList\models\Nationality;
 use ADiaz\AML\OpenList\models\PlaceOfBirth;
@@ -163,27 +163,27 @@ class Ukhmt implements ListInterface
     protected function getMap()
     {
         $fields = [
-            'last_name' => 0,
-            'first_name' => [1, 2, 3, 4, 5],
-            'title' => 6,
-            'dob' => 7,
-            'tob' => 8,
-            'cob' => 9,
-            'nationality' => 10,
-            'passport' => 11,
-            'ni_number' => 12,
-            'position' => 13,
-            'address' => [14, 15, 16, 17, 18],
-            'city' => 19,
-            'postcode' => 20,
-            'country' => 21,
+            'last_name'         => 0,
+            'first_name'        => [1, 2, 3, 4, 5],
+            'title'             => 6,
+            'dob'               => 7,
+            'tob'               => 8,
+            'cob'               => 9,
+            'nationality'       => 10,
+            'passport'          => 11,
+            'ni_number'         => 12,
+            'position'          => 13,
+            'address'           => [14, 15, 16, 17, 18],
+            'city'              => 19,
+            'postcode'          => 20,
+            'country'           => 21,
             'other_information' => 22,
-            'group_type' => 23,
-            'row_type' => 24,
-            'regime' => 25,
-            'listen_on' => 26,
-            'last_updated' => 27,
-            'group_id' => 28,
+            'group_type'        => 23,
+            'row_type'          => 24,
+            'regime'            => 25,
+            'listen_on'         => 26,
+            'last_updated'      => 27,
+            'group_id'          => 28,
         ];
 
         return $fields;
