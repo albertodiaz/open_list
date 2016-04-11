@@ -2,11 +2,11 @@
 
 namespace ADiaz\AML\OpenList\commands;
 
+use ADiaz\AML\OpenList\Utils\Utils;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use ADiaz\AML\OpenList\Utils\Utils;
 
 /**
  * This file is part of the OpenList Parser utility.

@@ -2,16 +2,16 @@
 
 namespace ADiaz\AML\OpenList\parsers;
 
-use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Address;
 use ADiaz\AML\OpenList\models\Aka;
 use ADiaz\AML\OpenList\models\Citizenship;
 use ADiaz\AML\OpenList\models\DateOfBirth;
+use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Id;
 use ADiaz\AML\OpenList\models\Nationality;
 use ADiaz\AML\OpenList\models\PlaceOfBirth;
-use ADiaz\AML\OpenList\models\Vessel;
 use ADiaz\AML\OpenList\models\Program;
+use ADiaz\AML\OpenList\models\Vessel;
 
 /**
  * This file is part of the OpenList Parser utility.
@@ -101,56 +101,56 @@ class Usofac implements ListInterface
     {
         return [
             self::ID => [
-                'id' => 'uid',
-                'type' => 'idType',
-                'number' => 'idNumber',
-                'country' => 'idCountry',
-                'date' => 'issueDate',
+                'id'             => 'uid',
+                'type'           => 'idType',
+                'number'         => 'idNumber',
+                'country'        => 'idCountry',
+                'date'           => 'issueDate',
                 'expirationDate' => 'expirationDate',
             ],
             self::AKA => [
-                'id' => 'uid',
-                'type' => 'idType',
-                'category' => 'category',
-                'last_name' => 'lastName',
+                'id'         => 'uid',
+                'type'       => 'idType',
+                'category'   => 'category',
+                'last_name'  => 'lastName',
                 'first_name' => 'firstName',
             ],
             self::ADDRESS => [
-                'id' => 'uid',
-                'address1' => 'address1',
-                'address2' => 'address2',
-                'address3' => 'address3',
-                'city' => 'city',
+                'id'                => 'uid',
+                'address1'          => 'address1',
+                'address2'          => 'address2',
+                'address3'          => 'address3',
+                'city'              => 'city',
                 'state_or_province' => 'stateOrProvince',
-                'postal_code' => 'postalCode',
-                'country' => 'country',
+                'postal_code'       => 'postalCode',
+                'country'           => 'country',
             ],
             self::NATIONALITY => [
-                'id' => 'uid',
-                'country' => 'country',
+                'id'         => 'uid',
+                'country'    => 'country',
                 'main_entry' => 'mainEntry',
             ],
             self::CITIZENSHIP => [
-                'id' => 'uid',
-                'country' => 'country',
+                'id'         => 'uid',
+                'country'    => 'country',
                 'main_entry' => 'mainEntry',
             ],
             self::DATE_OF_BIRTH => [
-                'id' => 'uid',
+                'id'            => 'uid',
                 'date_of_birth' => 'dateOfBirth',
-                'main_entry' => 'mainEntry',
+                'main_entry'    => 'mainEntry',
             ],
             self::PLACE_OF_BIRTH => [
-                'id' => 'uid',
+                'id'             => 'uid',
                 'place_of_birth' => 'placeOfBirth',
-                'main_entry' => 'mainEntry',
+                'main_entry'     => 'mainEntry',
             ],
             self::VESSEL => [
-                'call_sign' => 'callSign',
-                'vessel_type' => 'vesselType',
-                'vessel_flag' => 'vesselFlag',
-                'vessel_owner' => 'vesselOwner',
-                'tonnage' => 'tonnage',
+                'call_sign'                => 'callSign',
+                'vessel_type'              => 'vesselType',
+                'vessel_flag'              => 'vesselFlag',
+                'vessel_owner'             => 'vesselOwner',
+                'tonnage'                  => 'tonnage',
                 'gross_registered_tonnage' => 'grossRegisteredTonnage',
             ],
             self::PROGRAM => [
@@ -247,7 +247,7 @@ class Usofac implements ListInterface
             $content = $entityNode[$node];
         }
 
-        return $content ? $content : array();
+        return $content ? $content : [];
     }
 
     /**

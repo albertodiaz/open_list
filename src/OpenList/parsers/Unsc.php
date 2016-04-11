@@ -2,10 +2,10 @@
 
 namespace ADiaz\AML\OpenList\parsers;
 
-use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Address;
 use ADiaz\AML\OpenList\models\Aka;
 use ADiaz\AML\OpenList\models\DateOfBirth;
+use ADiaz\AML\OpenList\models\Entity;
 use ADiaz\AML\OpenList\models\Id;
 use ADiaz\AML\OpenList\models\Nationality;
 use ADiaz\AML\OpenList\models\PlaceOfBirth;
