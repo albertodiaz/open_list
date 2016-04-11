@@ -1,4 +1,7 @@
 [![Build Status](https://semaphoreci.com/api/v1/diaz/open_list/branches/master/badge.svg)](https://semaphoreci.com/diaz/open_list)
+[![Dependency Status](https://www.versioneye.com/user/projects/570bd9d3fcd19a00415b1194/badge.svg?style=flat)](https://www.versioneye.com/user/projects/570bd9d3fcd19a00415b1194)
+[![Code Climate](https://codeclimate.com/github/albertodiaz/open_list/badges/gpa.svg)](https://codeclimate.com/github/albertodiaz/open_list)
+
 
 # Sanction lists parser
 
