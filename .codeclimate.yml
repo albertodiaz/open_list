@@ -3,6 +3,24 @@ languages:
     JavaScript: false
     PHP: true
     Python: false
+engines:
+  # ... CONFIG CONTENT ...
+  phpmd:
+    enabled: true
+    # ... CONFIG CONTENT ...
+    checks:
+      Controversial/CamelCasePropertyName:
+        enabled: false
+  fixme:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - php
+ratings:
+  paths:
+  - "**.php"
 exclude_paths:
     - "vendor/*"
     - "src/OpenList/conf/lists.php"

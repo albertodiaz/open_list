@@ -367,8 +367,8 @@ class Unsc implements ListInterface
     /**
      * just a simple function to add to a string.
      *
-     * @param $str
-     * @param $label
+     * @param string|null $str
+     * @param string      $label
      *
      * @return string
      */

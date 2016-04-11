@@ -38,7 +38,7 @@ class Entity
     public $place_of_birth_list;
     public $vessel;
     public $remarks;
-    //@TODO add update_at_list
+    public $update_at_list;
 
     /* Individual */
     const TYPE_INDIVIDUAL = 'Individual';
@@ -66,6 +66,7 @@ class Entity
         $this->citizenship_list = [];
         $this->date_of_birth_list = [];
         $this->place_of_birth_list = [];
+        $this->update_at_list = [];
         $this->external_id = $external_id;
     }
 
@@ -76,10 +77,10 @@ class Entity
         }
     }
 
-    public function addId(Id $id)
+    public function addId(Id $documentId)
     {
-        if (!$this->isEmpty($id) && !in_array($id, $this->id_list)) {
-            $this->id_list[] = $id;
+        if (!$this->isEmpty($documentId) && !in_array($documentId, $this->id_list)) {
+            $this->id_list[] = $documentId;
         }
     }
 
@@ -123,10 +124,16 @@ class Entity
             $this->program_list[] = $program;
         }
     }
+    public function addUpdateAt($date)
+    {
+        if ((bool) strtotime($date)) {
+            $this->update_at_list[] = $date;
+        }
+    }
 
     public function isEmpty($obj)
     {
-        foreach ($obj as $key => $value) {
+        foreach ($obj as $attribute => $value) {
             if ((is_string($value) && trim($value) !== '')) {
                 return false;
             }

@@ -26,8 +26,12 @@ install:
 script:
     - php open_list.php receive
     - php open_list.php process
-    - phpunit --verbose --coverage-clover build/logs/clover.xml
+    - phpunit --verbose --coverage-clover=build/logs/clover.xml
     - phpenv config-rm xdebug.ini || return 0
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 after_success:
     - php vendor/bin/coveralls -v

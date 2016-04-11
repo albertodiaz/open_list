@@ -49,16 +49,17 @@ checks:
 build:
     environment:
         php:
-            version: 5.6       # Common versions: 5.4, 5.5, 5.6, 7.0 or hhvm
+            version: 7.0       # Common versions: 5.4, 5.5, 5.6, 7.0 or hhvm
     environment:
         php:
-            version: 5.6
+            version: 7.0
             ini:
                 'date.timezone': 'Europe/Madrid'
     tests:
         override:
             -
-                command: 'phpunit --coverage-clover=my-coverage-file'
+                command: 'phpunit --coverage-clover=clover.xml'
+                idle_timeout: 300
                 coverage:
-                    file: 'my-coverage-file'
+                    file: 'clover.xml'
                     format: 'php-clover'

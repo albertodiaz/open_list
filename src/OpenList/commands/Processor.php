@@ -135,6 +135,7 @@ class Processor extends Command
 
     /**
      * Validate if the list contains the minimun elemenents.
+     *
      * @param $list
      */
     protected function validateInfo($list)

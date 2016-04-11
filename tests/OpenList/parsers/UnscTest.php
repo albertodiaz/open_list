@@ -36,7 +36,7 @@ class UnscTest extends \PHPUnit_Framework_TestCase
         $this->parser->run();
 
         // export
-        $exporter = new Exporter($this->output_folder);
+        $exporter = new Exporter(__DIR__.'/../../../output/');
         $exporter->json($this->parser->getEntities(), 'test_unsc');
     }
 
