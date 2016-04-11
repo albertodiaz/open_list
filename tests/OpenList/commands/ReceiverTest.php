@@ -2,8 +2,6 @@
 
 namespace ADiaz\AML\OpenList\commands;
 
-require __DIR__.'/../../../src/autoload.php';
-
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 

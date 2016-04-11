@@ -2,8 +2,6 @@
 
 namespace ADiaz\AML\OpenList\commands;
 
-require __DIR__.'/../../../src/autoload.php';
-
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Tester\CommandTester;
 
@@ -42,6 +40,17 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
     {
         $config = require __DIR__.'/../../../src/OpenList/conf/app.php';
 
+        // Before execute this test, it is necessary to execute the command receive
+        $applicationReceiver = new Application();
+        $applicationReceiver->add(new Receiver($config));
+
+        $commandReceiver = $applicationReceiver->find('receive');
+        $commandTesterReceiver = new CommandTester($commandReceiver);
+        $commandTesterReceiver->execute(array(
+            'command' => $commandReceiver->getName(),
+        ));
+
+        // Start processing
         $application = new Application();
         $application->add(new Processor($config));
 
