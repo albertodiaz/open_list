@@ -27,10 +27,6 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->output_path = __DIR__.'/../../../output/';
-
-        if (!file_exists($this->output_path)) {
-            mkdir($this->output_path, 0777, true);
-        }
     }
 
     /**
